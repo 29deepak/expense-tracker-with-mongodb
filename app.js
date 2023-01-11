@@ -52,7 +52,7 @@ app.use(RazorpayRoutes)
   
 // })
 
-mongoose.connect('mongodb+srv://deepak:pEogltBTbUpKvbe8@cluster0.ypqknjp.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGOOSE)
 .then(result=>{
   app.listen(4000)
 }).catch(err=>{
