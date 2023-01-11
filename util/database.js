@@ -2,7 +2,7 @@ const mongodb = require('mongodb');
 const MongoCilent = mongodb.MongoClient;
 let _db;
 const mongoConnect = callback =>{
-  MongoCilent.connect('mongodb+srv://deepak:pEogltBTbUpKvbe8@cluster0.ypqknjp.mongodb.net/?retryWrites=true&w=majority')
+  MongoCilent.connect(process.env.MONGOOSE)
   .then(client =>{
     console.log('connected')
     // _db=client.db();
